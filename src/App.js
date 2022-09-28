@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Cart from './components/Cart/Cart';
 import Items from './components/Items/Items';
 import Header from './components/Layout/Header';
-import CartProvider from './store/CartProvider';
+import CartProvider from './Store/CartProvider';
 
 function App() {
   const [cartIsShown, setCartIsShown] = useState(false);
