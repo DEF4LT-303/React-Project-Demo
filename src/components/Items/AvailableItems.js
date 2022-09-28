@@ -26,6 +26,7 @@ const DUMMY_ITEMS = [
 const AvailableItems = () => {
   const itemList = DUMMY_ITEMS.map(item => <IndividualItem 
     key={item.id} 
+    id={MediaList.id}
     name={item.name} 
     description={item.description} 
     price={item.price} />
