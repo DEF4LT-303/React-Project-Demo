@@ -1,14 +1,15 @@
 import { useContext } from 'react';
-import CartContext from '../../../Store/cart-context';
+
+import CartContext from '../../../store/cart-context';
 import classes from './IndividualItem.module.css';
-import ItemForm from './ItemForm';
+import MealItemForm from './ItemForm';
 
 const IndividualItem = (props) => {
   const cartCtx = useContext(CartContext);
 
   const price = `TK. ${props.price.toFixed(2)}`;
 
-  const onAddToCartHandler = (amount) => {
+  const addToCartHandler = (amount) => {
     cartCtx.addItem({
       id: props.id,
       name: props.name,
@@ -18,14 +19,14 @@ const IndividualItem = (props) => {
   };
 
   return (
-    <li className={classes.item}>
+    <li className={classes.meal}>
       <div>
         <h3>{props.name}</h3>
         <div className={classes.description}>{props.description}</div>
         <div className={classes.price}>{price}</div>
       </div>
       <div>
-        <ItemForm id={props.id} onAddToCart={onAddToCartHandler} />
+        <MealItemForm id={props.id} onAddToCart={addToCartHandler} />
       </div>
     </li>
   );

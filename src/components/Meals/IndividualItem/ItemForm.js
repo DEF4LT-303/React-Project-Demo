@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react';
+
 import Input from '../../UI/Input';
 import classes from './ItemForm.module.css';
 
@@ -38,7 +39,6 @@ const ItemForm = (props) => {
           defaultValue: '1'
         }}
       />
-
       <button>+ Add</button>
       {!amountIsValid && <p>Please enter a valid amount (1-5).</p>}
     </form>
