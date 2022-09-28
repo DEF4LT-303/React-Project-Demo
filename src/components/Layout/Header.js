@@ -4,16 +4,20 @@ import classes from "./Header.module.css";
 import HeaderCartButton from "./HeaderCartButton";
 
 const Header = props => {
-  return( <Fragment>
+  return ( 
+  
+  <Fragment>
     <header className={classes.header}>
       <h1>Game Shop</h1>
-      <HeaderCartButton />
+      <HeaderCartButton onClick={props.onShowCart} />
     </header>
 
     <div className={classes['main-image']}>
       <img src={banner} alt="banner" />
     </div>
-  </Fragment>);
+  </Fragment>
+  
+  );
 };
 
 export default Header;
