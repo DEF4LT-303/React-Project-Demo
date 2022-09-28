@@ -4,10 +4,9 @@ import classes from './IndividualItem.module.css';
 import ItemForm from './ItemForm';
 
 const IndividualItem = (props) => {
+  const cartCtx = useContext(CartContext);
 
   const price = `TK. ${props.price.toFixed(2)}`;
-
-  const cartCtx = useContext(CartContext)
 
   const onAddToCartHandler = (amount) => {
     cartCtx.addItem({
@@ -15,7 +14,7 @@ const IndividualItem = (props) => {
       name: props.name,
       amount: amount,
       price: props.price
-    })
+    });
   };
 
   return (
@@ -26,9 +25,10 @@ const IndividualItem = (props) => {
         <div className={classes.price}>{price}</div>
       </div>
       <div>
-        <ItemForm onAddToCart={onAddToCartHandler}/>
+        <ItemForm id={props.id} onAddToCart={onAddToCartHandler} />
       </div>
-    </li>);
+    </li>
+  );
 };
 
 export default IndividualItem;
