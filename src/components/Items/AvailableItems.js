@@ -17,9 +17,9 @@ const DUMMY_ITEMS = [
   },
   {
     id: 'm3',
-    name: '$10 Steam Wallet Card',
-    description: 'Redeem code for $10 Steam Wallet Card',
-    price: 1030,
+    name: '69 Genesis Crystals',
+    description: 'Become a damn whale 🐋',
+    price: 6969,
   },
 ];
 
