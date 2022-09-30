@@ -24,23 +24,23 @@ const DUMMY_ITEMS = [
 ];
 
 const AvailableItems = () => {
-  const mealsList = DUMMY_ITEMS.map((meal) => (
+  const itemsList = DUMMY_ITEMS.map((item) => (
     <IndividualItem
-      key={meal.id}
-      id={meal.id}
-      name={meal.name}
-      description={meal.description}
-      price={meal.price}
+      key={item.id}
+      id={item.id}
+      name={item.name}
+      description={item.description}
+      price={item.price}
     />
   ));
 
-  return (
-    <section className={classes.meals}>
+  return itemsList.map((item) => (
+    <section className={classes.items}>
       <Card>
-        <ul>{mealsList}</ul>
+        <ul>{item}</ul>
       </Card>
     </section>
-  );
+  ));
 };
 
 export default AvailableItems;
