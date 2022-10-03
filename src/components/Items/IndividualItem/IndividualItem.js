@@ -20,9 +20,6 @@ const IndividualItem = (props) => {
   return (
     <li className={classes.meal}>
       <div>
-        {/* <div className={classes['main-image']}>
-          <img src={image} alt='{props.name}' />
-        </div> */}
         <h3>{props.name}</h3>
         <div className={classes.description}>{props.description}</div>
         <div className={classes.price}>{price}</div>

@@ -46,11 +46,17 @@ const AvailableItems = () => {
 
   return (
     <Container className={classes.items}>
-      <Grid container spacing={3}>
+      <Grid
+        container
+        spacing={3}
+        direction='row'
+        alignItems='center'
+        justify='center'
+      >
         {itemsList.map((item) => (
           <Grid item key={item.id} xs={12} sm={6} md={4} lg={3}>
-            {/* <ItemCard>{item}</ItemCard> */}
             <ItemCard>{item}</ItemCard>
+            {/* <ItemCard name={item.name} description={item.description} /> */}
           </Grid>
         ))}
       </Grid>

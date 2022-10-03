@@ -8,22 +8,23 @@ import steam from '../../assets/steam.png';
 const ItemCard = (props) => {
   // return <div className={classes.card}>{props.children}</div>;
 
+  console.log(props.children);
   return (
     <div>
       <Card sx={{ maxWidth: 345 }}>
         <CardMedia
           component='img'
-          height='140'
+          height='200'
           image={steam}
           alt='$5 steam card'
         />
         <CardContent>
           <Typography gutterBottom variant='h5' component='div'>
-            {/* {props.title} */}
-          </Typography>
-          <Typography variant='body2' color='text.secondary'>
             {props.children}
           </Typography>
+          {/* <Typography variant='body2' color='text.secondary'> */}
+          {/* {props.children} */}
+          {/* </Typography> */}
         </CardContent>
       </Card>
     </div>
