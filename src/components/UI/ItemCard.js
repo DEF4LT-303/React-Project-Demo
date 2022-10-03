@@ -11,7 +11,13 @@ const ItemCard = (props) => {
   console.log(props.children);
   return (
     <div>
-      <Card sx={{ maxWidth: 345 }}>
+      <Card
+        sx={{
+          maxWidth: 345,
+          boxShadow: '0 2px 8px rgba(0, 0, 0, 0.25)',
+          height: '100%'
+        }}
+      >
         <CardMedia
           component='img'
           height='200'
@@ -19,12 +25,12 @@ const ItemCard = (props) => {
           alt='$5 steam card'
         />
         <CardContent>
-          <Typography gutterBottom variant='h5' component='div'>
-            {props.children}
-          </Typography>
-          {/* <Typography variant='body2' color='text.secondary'> */}
+          {/* <Typography gutterBottom variant='h5' component='div'> */}
           {/* {props.children} */}
           {/* </Typography> */}
+          <Typography variant='body2' color='text.secondary'>
+            {props.children}
+          </Typography>
         </CardContent>
       </Card>
     </div>

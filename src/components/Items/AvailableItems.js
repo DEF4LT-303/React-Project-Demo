@@ -7,21 +7,33 @@ import IndividualItem from './IndividualItem/IndividualItem';
 const DUMMY_ITEMS = [
   {
     id: 'm1',
-    name: '$1 Steam Wallet Card',
-    description: 'Redeem code for $1 Steam Wallet Card',
-    price: 110
-  },
-  {
-    id: 'm2',
-    name: '$5 Steam Wallet Card',
+    name: '$5 steam wallet',
     description: 'Redeem code for $5 Steam Wallet Card',
     price: 520
   },
   {
+    id: 'm4',
+    name: '$100 steam wallet',
+    description: 'Redeem code for $100 Steam Wallet Card',
+    price: 10800
+  },
+  // {
+  //   id: 'm3',
+  //   name: '69 Genesis Crystals',
+  //   description: 'Become a damn whale 🐋',
+  //   price: 6969
+  // },
+  {
     id: 'm3',
-    name: '69 Genesis Crystals',
-    description: 'Become a damn whale 🐋',
-    price: 6969
+    name: '$50 steam wallet',
+    description: 'Redeem code for $50 Steam Wallet Card',
+    price: 5200
+  },
+  {
+    id: 'm5',
+    name: '$1 steam wallet',
+    description: 'Redeem code for $10 Steam Wallet Card',
+    price: 120
   }
 ];
 
@@ -35,14 +47,6 @@ const AvailableItems = () => {
       price={item.price}
     />
   ));
-
-  // return itemsList.map((item) => (
-  //   <Container className={classes.items}>
-  //     <Card>
-  //       <ul>{item}</ul>
-  //     </Card>
-  //   </Container>
-  // ));
 
   return (
     <Container className={classes.items}>
