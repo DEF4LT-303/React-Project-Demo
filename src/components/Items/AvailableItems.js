@@ -1,4 +1,6 @@
-import Card from '../UI/Card';
+import Grid from '@material-ui/core/Grid';
+import { Container } from 'react-bootstrap';
+import ItemCard from '../UI/ItemCard';
 import classes from './AvailableItems.module.css';
 import IndividualItem from './IndividualItem/IndividualItem';
 
@@ -34,13 +36,26 @@ const AvailableItems = () => {
     />
   ));
 
-  return itemsList.map((item) => (
-    <section className={classes.items}>
-      <Card>
-        <ul>{item}</ul>
-      </Card>
-    </section>
-  ));
+  // return itemsList.map((item) => (
+  //   <Container className={classes.items}>
+  //     <Card>
+  //       <ul>{item}</ul>
+  //     </Card>
+  //   </Container>
+  // ));
+
+  return (
+    <Container className={classes.items}>
+      <Grid container spacing={3}>
+        {itemsList.map((item) => (
+          <Grid item key={item.id} xs={12} sm={6} md={4} lg={3}>
+            {/* <ItemCard>{item}</ItemCard> */}
+            <ItemCard>{item}</ItemCard>
+          </Grid>
+        ))}
+      </Grid>
+    </Container>
+  );
 };
 
 export default AvailableItems;
