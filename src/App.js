@@ -2,6 +2,8 @@ import { useState } from 'react';
 
 import { Helmet } from 'react-helmet';
 import Cart from './components/Cart/Cart';
+import Slideshow from './components/DisplaySlider/SlideShow';
+import AvailableItems from './components/Items/AvailableItems';
 import Items from './components/Items/Items';
 import Header from './components/Layout/Header';
 import CartProvider from './Store/CartProvider';
@@ -24,12 +26,15 @@ function App() {
         <title>My Game Shop</title>
         <link rel='canonical' href='http://mysite.com/example' />
         <meta name='A simple demo site' content='Nested component' />
+        <style>{'body { background-color: #d8d8d8; }'}</style>
       </Helmet>
 
       {cartIsShown && <Cart onClose={hideCartHandler} />}
       <Header onShowCart={showCartHandler} />
       <main>
         <Items />
+        <Slideshow />
+        <AvailableItems />
       </main>
     </CartProvider>
   );

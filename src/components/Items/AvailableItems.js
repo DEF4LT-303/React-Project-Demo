@@ -60,20 +60,9 @@ const AvailableItems = () => {
     />
   ));
 
-  const sliderSettings = {
-    dots: true,
-    arrows: true,
-    infinite: true,
-    speed: 500,
-    rows: 1,
-    slidesToShow: 2,
-    slidesToScroll: 1
-  };
-
   console.log(itemsList);
 
   return (
-    // <Slider {...sliderSettings}>
     <Container className={classes.items}>
       <Grid
         container
@@ -96,7 +85,6 @@ const AvailableItems = () => {
         ))}
       </Grid>
     </Container>
-    // </Slider>
   );
 };
 
