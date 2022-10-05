@@ -7,7 +7,8 @@ import classes from './SlideShow.module.css';
 
 const images = [
   'https://preview.redd.it/nzf7mlkli5k71.png?auto=webp&s=8ce1103c1231392893235dc8b7524b035dc5c24a',
-  'https://staticg.sportskeeda.com/editor/2022/08/2bea8-16608644287140-1920.jpg'
+  'https://staticg.sportskeeda.com/editor/2022/08/2bea8-16608644287140-1920.jpg',
+  'https://i0.wp.com/news.seagm.com/wp-content/uploads/2021/09/howtotopupgenesisSEAGMFeaturedImage20210908.jpg?fit=1200%2C675&ssl=1'
 ];
 const delay = 2500;
 
@@ -15,6 +16,8 @@ function Slideshow() {
   let settings = {
     infinite: true,
     speed: 1000,
+    autoplay: true,
+    autoplaySpeed: 5000,
     arrows: true,
     slidesToShow: 1,
     slidesToScroll: 1
