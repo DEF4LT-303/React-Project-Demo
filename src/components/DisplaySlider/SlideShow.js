@@ -10,7 +10,6 @@ const images = [
   'https://staticg.sportskeeda.com/editor/2022/08/2bea8-16608644287140-1920.jpg',
   'https://i0.wp.com/news.seagm.com/wp-content/uploads/2021/09/howtotopupgenesisSEAGMFeaturedImage20210908.jpg?fit=1200%2C675&ssl=1'
 ];
-const delay = 2500;
 
 function Slideshow() {
   let settings = {
