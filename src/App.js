@@ -26,6 +26,7 @@ function App() {
         <title>My Game Shop</title>
         <link rel='canonical' href='http://mysite.com/example' />
         <meta name='A simple demo site' content='Nested component' />
+        <style>{'body { background-color: #b5b5b5; }'}</style>
       </Helmet>
 
       {cartIsShown && <Cart onClose={hideCartHandler} />}

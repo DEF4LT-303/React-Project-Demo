@@ -16,9 +16,10 @@ function Slideshow() {
   let settings = {
     infinite: true,
     speed: 1000,
+    arrows: false,
     autoplay: true,
-    autoplaySpeed: 5000,
-    arrows: true,
+    autoplaySpeed: 4000,
+    dots: true,
     slidesToShow: 1,
     slidesToScroll: 1
 
