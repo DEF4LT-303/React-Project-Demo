@@ -4,7 +4,7 @@ const ItemsSummary = () => {
   return (
     <section className={classes.summary}>
       <h2>Games, Codes & Wallets available for purchase!</h2>
-      <p>Test game site</p>
+      <p>Check Us Out!</p>
     </section>
   );
 };
