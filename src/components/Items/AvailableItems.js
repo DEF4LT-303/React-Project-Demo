@@ -21,9 +21,9 @@ const DUMMY_ITEMS = [
   },
   {
     id: 'm3',
-    name: '69 Genesis Crystals',
+    name: 'Genesis Crystals',
     description: 'Become a damn whale 🐋',
-    price: 6969,
+    price: 6000,
     img: 'https://store.playstation.com/store/api/chihiro/00_09_000/container/SG/en/99/EP6261-PPSA02584_00-YSPS4VC6THTIER60/0/image?_version=00_09_000&platform=chihiro&bg_color=000000&opacity=100&w=720&h=720'
   },
   {
@@ -32,21 +32,21 @@ const DUMMY_ITEMS = [
     description: 'Redeem code for $50 Steam Wallet Card',
     price: 5200,
     img: 'https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6577/6577073_sa.jpg;maxHeight=640;maxWidth=550'
-  },
-  {
-    id: 'm3',
-    name: '$50 steam wallet',
-    description: 'Redeem code for $50 Steam Wallet Card',
-    price: 5200,
-    img: 'https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6577/6577073_sa.jpg;maxHeight=640;maxWidth=550'
-  },
-  {
-    id: 'm3',
-    name: '$50 steam wallet',
-    description: 'Redeem code for $50 Steam Wallet Card',
-    price: 5200,
-    img: 'https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6577/6577073_sa.jpg;maxHeight=640;maxWidth=550'
   }
+  // {
+  //   id: 'm3',
+  //   name: '$50 steam wallet',
+  //   description: 'Redeem code for $50 Steam Wallet Card',
+  //   price: 5200,
+  //   img: 'https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6577/6577073_sa.jpg;maxHeight=640;maxWidth=550'
+  // },
+  // {
+  //   id: 'm3',
+  //   name: '$50 steam wallet',
+  //   description: 'Redeem code for $50 Steam Wallet Card',
+  //   price: 5200,
+  //   img: 'https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6577/6577073_sa.jpg;maxHeight=640;maxWidth=550'
+  // }
 ];
 
 const AvailableItems = () => {
@@ -60,17 +60,20 @@ const AvailableItems = () => {
     />
   ));
 
-  const settings = {
+  const sliderSettings = {
     dots: true,
+    arrows: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
+    rows: 1,
+    slidesToShow: 2,
     slidesToScroll: 1
   };
 
   console.log(itemsList);
 
   return (
+    // <Slider {...sliderSettings}>
     <Container className={classes.items}>
       <Grid
         container
@@ -79,7 +82,6 @@ const AvailableItems = () => {
         alignItems='center'
         justify='center'
       >
-        {/* <Slider {...settings}> */}
         {DUMMY_ITEMS.map((item) => (
           <Grid item xs={12} sm={6} md={4} lg={3}>
             <ItemCard
@@ -92,9 +94,9 @@ const AvailableItems = () => {
             />
           </Grid>
         ))}
-        {/* </Slider> */}
       </Grid>
     </Container>
+    // </Slider>
   );
 };
 
