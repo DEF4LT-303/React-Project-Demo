@@ -24,6 +24,10 @@ const ItemCard = (props) => {
     shadow: 1
   });
 
+  const truncate = (str) => {
+    return str.length > 60 ? str.substring(0, 60) + '...' : str;
+  };
+
   return (
     <div>
       <Card
@@ -46,8 +50,16 @@ const ItemCard = (props) => {
             {props.name}
           </Typography>
 
-          <Typography variant='body2' color='text.secondary'>
-            {props.description}
+          <Typography
+            variant='body2'
+            color='text.secondary'
+            sx={{
+              minHeight: '50px',
+              textOverflow: 'ellipsis',
+              overflow: 'hidden'
+            }}
+          >
+            {truncate(props.description)}
           </Typography>
 
           <CardActions>
